@@ -9,8 +9,7 @@ function Home()
     const [searchQuery,setSearchQuery]=useState("nagpur")
     const loadnews= async()=>{
 try{
-    const response= await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}
-    &from=2023-10-06&sortBy=popularityAt&apiKey=${process.env.REACT_APP_API_KEY}`);
+    const response= await axios.get(`https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-09-14&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`);
   setNews(response.data.articles)
 }
 catch(error){
